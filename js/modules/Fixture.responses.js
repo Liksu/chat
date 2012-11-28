@@ -8,7 +8,7 @@ Fixture.short(/^\/events\/connect/, function() {
 		status: 'ok'
 		, events: [{
 			message_type: 'update'
-			, recipient: 'hello_world'
+			, recipient: 'main'
 			, data: { time: u.getDT() }
 		}]
 	}}, 5000);
@@ -29,10 +29,10 @@ Fixture.short('/api/getObject', function() {
 	var json = {};
 
 	switch (arguments[1].data.id) {
-		case 'hello_world':
+		case 'main':
 			json = {
-				widget_id: 'hello_world'
-				, widget_name: 'hello_world'
+				widget_id: 'main'
+				, widget_name: 'main'
 				, template_name: 'main'
 				, need_data: false
 				, draw_if_null: true
@@ -40,12 +40,12 @@ Fixture.short('/api/getObject', function() {
 				, data: {}
 				, tray: 1
 				, trays: []
-				, voc: { title: 'Demo page' }
+				, voc: { title: 'Alien chat', login: 'username' }
 			};
 			break;
 		default:
 			json = {
-				children: [['hello_world']]
+				children: [['main']]
 			};
 	};
 	return json;
