@@ -8,6 +8,10 @@ function(CM) {
 
 	CM.W.constructor_hook.push(function() {
 		var widget = this;
+
+//		widget.trigg('render:after', function(data, cb, sender) {
+//			widget.$rendered.addClass('window');
+//		})
 	}
 	);
 

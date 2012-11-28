@@ -24,6 +24,19 @@ Fixture.short('/api/getSettings', {
 		, curr: 'UAH'
 	});
 
+Fixture.short('/api/getData', function() {
+	var json = {};
+
+	switch (arguments[1].data.id) {
+		case 'contact_list': {
+			json = {
+
+			}
+		}
+	}
+
+	return json;
+});
 
 Fixture.short('/api/getObject', function() {
 	var json = {};
@@ -36,11 +49,39 @@ Fixture.short('/api/getObject', function() {
 				, template_name: 'main'
 				, need_data: false
 				, draw_if_null: true
+				, children: [['contact_list', 'room']]
+				, data: {}
+				, tray: 1
+				, trays: ['main']
+				, voc: { title: 'Alien chat', login: 'username' }
+			};
+			break;
+		case 'contact_list':
+			json = {
+				widget_id: 'contact_list'
+				, widget_name: 'contact_list'
+				, template_name: 'contact_list'
+				, need_data: true
+				, draw_if_null: true
 				, children: []
 				, data: {}
 				, tray: 1
 				, trays: []
-				, voc: { title: 'Alien chat', login: 'username' }
+				, voc: {  }
+			};
+			break;
+		case 'room':
+			json = {
+				widget_id: 'room'
+				, widget_name: 'room'
+				, template_name: 'room'
+				, need_data: false
+				, draw_if_null: true
+				, children: []
+				, data: {}
+				, tray: 1
+				, trays: []
+				, voc: {  }
 			};
 			break;
 		default:

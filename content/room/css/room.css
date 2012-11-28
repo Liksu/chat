@@ -1,0 +1,10 @@
+.w-room {
+	min-width: 100px;
+	width: 300px;
+	height: 200px;
+	top: 42px;
+	left: 1em;
+}
+
+.w-room .caption {
+}

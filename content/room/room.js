@@ -13,10 +13,13 @@ function(wo) {
 	$.extend(true, self.wo, wo);
 
 	self.ready = function() {
+		self.$rendered.addClass('window');
 	};
 
-	self.events.set('click.area', function(e) {
-		ok('area');
-		CM.identify('room').each(function(i, w) {w.$rendered.removeClass('active')})
+	self.events.set('click.window', function(e) {
+		ok('room');
+		self.$rendered.toggleClass('active');
+		e.stopPropagation();
+		e.preventDefault();
 	});
 }
