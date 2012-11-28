@@ -41,7 +41,9 @@
 					, api: '/api/${method}'
 					, events: '/events/' // do not forget to add method!
 					, modules: '/alien/modules/${module_name}.js'
-					, local_modules: {js: 'js/modules/${module_name}.js'}
+					, local: {
+						modules: 'js/modules/${module_name}.js'
+					}
 					, plugins: {
 						js: '/alien/plugins/${module_name}/${module_name}.js'
 						, tmpl: '/alien/plugins/${module_name}/${template_name}.html'
@@ -65,14 +67,14 @@
 			var gather_id = CM.gather({
 				link: {}
 				, properties: [
-					  'local_modules:project_spec'
+					  'mod:local/modules/project_spec'
 					, 'mod:transport'
 					, 'settings'
 					, 'register'
 				]
 				, cb: function() {
-					CM.local_modules['project_spec'].after_load();
-					delete CM.local_modules['project_spec'];
+					CM.mod['project_spec'].after_load();
+					delete CM.mod['project_spec'];
 
 					//clear body
 					CM.root.trays.each(function(i, tray) { if (i) CM.root.$(tray.selector).html('') });
@@ -101,11 +103,10 @@
 				// secondary loading
 
 				// simple module loading
-				$.each({transport: 'mod', project_spec: 'local_modules', reload: 'plugin'}, function(name, type) {
+				$.each({transport: 'mod', 'local/modules/project_spec': 'mod', reload: 'plugin'}, function(name, type) {
 					var cb = function() { u.set_to_gather(gather_id, type + ':' + name, true) };
 
 					if (type == 'mod') CM.load_module(name, cb);
-					else if (type == 'local_modules') CM.include(true, 'local_modules', name, cb);
 					else CM.load_plugin(name, null, cb);
 				})
 
