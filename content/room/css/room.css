@@ -6,5 +6,30 @@
 	left: 1em;
 }
 
+.w-room .icon {
+	display: inline-block;
+	top: 7px;
+	position: absolute;
+	margin-left: 5px;
+}
+
+.w-room .right {
+	position: relative;
+	float: right;
+	right: 4px;
+}
+
 .w-room .caption {
+}
+
+.w-room.collapsed {
+	height: 32px !important;
+}
+.w-room.collapsed .fable {display: none;}
+.w-room.collapsed .input {display: none;}
+.w-room.active .unread {display: none}
+.w-room.collapsed .unread {display: inline-block !important;}
+
+.w-room .input {
+	display: none;
 }

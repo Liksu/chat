@@ -16,6 +16,7 @@ body {
 	position: relative;
 	font-family: Verdana;
 	height: 100%;
+	overflow: hidden;
 }
 
 .window {
@@ -36,7 +37,7 @@ body {
 
 .caption .title {
 	top: 7px;
-	left: 4px;
+	left: 5px;
 	position: relative;
 }
 
