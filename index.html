@@ -19,12 +19,8 @@
 
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="/alien/libs/fixture.js"></script>
-	<script type="text/javascript" src="/alien/libs/json2.js"></script>
-	<script type="text/javascript" src="/alien/core/utils.js"></script>
-	<script type="text/javascript" src="/alien/debug/debug.js"></script>
+	<script type="text/javascript" src="http://delrut.com/alien/code/pack.js"></script>
 	<script type="text/javascript" src="js/modules/Fixture.responses.js"></script>
-	<script type="text/javascript" src="/alien/core/CM.js"></script> <!-- core of CM widget -->
 
 	 <!-- data for CM widget -->
 	<script>
@@ -33,21 +29,21 @@
 		$(document).ready(function() {
 			/*** start ***/
 			CM.start({
-			  product_version: "chat 0.01" // chat version
+			  product_version: "chat 0.02" // chat version
 			, required_plugins: ''
 			, default_children: [[null]] // array like [[widget_id]], where first [] = array of trays, second [] = array of widgets in tray. [[null]] set core to ask server for default children.
 			, urls: {
 					def: '/api/status'
 					, api: '/api/${method}'
 					, events: '/events/' // do not forget to add method!
-					, modules: '/alien/modules/${module_name}.js'
+					, modules: 'http://delrut.com/alien/code/modules/${module_name}.js'
 					, local: {
 						modules: 'js/modules/${module_name}.js'
 					}
 					, plugins: {
-						js: '/alien/plugins/${module_name}/${module_name}.js'
-						, tmpl: '/alien/plugins/${module_name}/${template_name}.html'
-						, res: '/alien/plugins/${module_name}/resources'
+						js: 'http://delrut.com/alien/code/plugins/${module_name}/${module_name}.js'
+						, tmpl: 'http://delrut.com/alien/code/plugins/${module_name}/${template_name}.html'
+						, res: 'http://delrut.com/alien/code/plugins/${module_name}/resources'
 					}
 					, css: 'styles/' // global theme styles, add local css file path
 					, widget: {
@@ -103,7 +99,7 @@
 				// secondary loading
 
 				// simple module loading
-				$.each({transport: 'mod', 'local/modules/project_spec': 'mod', reload: 'plugin'}, function(name, type) {
+				$.each({transport: 'mod', 'local/modules/project_spec': 'mod'}, function(name, type) {
 					var cb = function() { u.set_to_gather(gather_id, type + ':' + name, true) };
 
 					if (type == 'mod') CM.load_module(name, cb);

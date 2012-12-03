@@ -4,6 +4,7 @@
 	height: 200px;
 	top: 42px;
 	left: 1em;
+	z-index: 10;
 }
 
 .w-room .icon {
