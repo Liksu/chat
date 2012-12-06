@@ -1,10 +1,51 @@
-/* reset */
-body{padding:0;margin:0;font:13px Arial,Helvetica,Garuda,sans-serif;*font-size:small;*font:x-small;}
-h1,h2,h3,h4,h5,h6,ul,li,em,strong,pre,code{padding:0;margin:0;line-height:1em;font-size:100%;font-weight:normal;font-style: normal;}
-table{font-size:inherit;font:100%;}
-ul{list-style:none;}
-img{border:0;}
-p{margin:1em 0;}
+/* http://meyerweb.com/eric/tools/css/reset/
+v2.0 | 20110126
+License: none (public domain)
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed,
+figure, figcaption, footer, header, hgroup,
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+    margin: 0;
+    padding: 0;
+    border: 0;
+    font-size: 100%;
+    font: inherit;
+    vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+    display: block;
+}
+body {
+    line-height: 1;
+}
+ol, ul {
+    list-style: none;
+}
+blockquote, q {
+    quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+    content: '';
+    content: none;
+}
+table {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
 
 /* page */
 
@@ -14,42 +55,96 @@ html {
 
 body {
 	position: relative;
-	font-family: Verdana;
+	font-family: Verdana, Tahoma, Arial sans-serif;
 	height: 100%;
 	overflow: hidden;
 }
 
 .window {
 	border: 1px solid #bababa;
+    left: 0;
 	position: absolute;
+    top: 0;
 	background-color: #efefef;
+    min-width: 150px;
+    width: 200px;
+}
+
+.window.active {
+    border-color: navy;
+}
+
+.icons {
+    margin: 7px 5px 0 0;
+    position: absolute;
+    right: 0;
+    top: 0;
+}
+
+.icons li {
+    float: left;
 }
 
 .caption {
 	color: #7f7f7f;
 	font-weight: bold;
 	font-size: 80%;
-	width: 100%;
-	height: 32px;
+	padding: 5px 40px 5px 15px;
+	min-height: 22px;
 	vertical-align: middle;
 	background-color: #cfcfcf;
+    position: relative;
+    overflow: hidden;
 }
 
 .caption .title {
-	top: 7px;
-	left: 5px;
-	position: relative;
+    float: left;
+    padding-top: 2px;
+    white-space: pre-wrap;
 }
 
 .active {
 	background-color: white !important;
 }
 
-.window.active {
-	border-color: navy;
-}
+
 
 .active .caption {
 	background-color: #5b7fff;
 	color: white;
 }
+
+.unread {
+    left: 0;
+    margin: 6px 0 0;
+    position: absolute;
+    top: 0;
+}
+
+
+/*
+* UI styles
+* TODO need review
+*/
+.ui-icon { width: 16px; height: 16px; background-image: url(../imgs/icons.png)/*{iconsContent}*/; }
+
+.ui-resizable { position: relative;}
+.ui-resizable-handle { position: absolute;font-size: 0.1px; display: block; }
+
+.ui-resizable-s { cursor: s-resize; height: 7px; width: 100%; bottom: -5px; left: 0; }
+.ui-resizable-e { cursor: e-resize; width: 7px; right: -5px; top: 0; height: 100%; }
+.ui-resizable-se { cursor: se-resize; width: 12px; height: 12px; right: 1px; bottom: 1px; }
+
+.ui-icon-gripsmall-diagonal-se { background-position: -48px 0px; }
+
+.maximize {background-position: 0px 0px;}
+.minimize {background-position: -16px 0px;}
+.close {background-position: -32px 0px;}
+.unread {background-position: -64px 0px;}
+.unread.blink {background-position: -80px 0px;}
+
+.active .maximize {background-position: 0px -16px;}
+.active .minimize {background-position: -16px -16px;}
+.active .close {background-position: -32px -16px;}
+.active .unread {background-position: -64px -16px;}
+.active .unread.blink {background-position: -80px -16px;}

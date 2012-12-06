@@ -34,6 +34,6 @@ function(wo) {
 	});
 
 	setInterval(function() {
-		self.$('unread').toggleClass('blink');
+		//self.$('unread').toggleClass('blink');
 	}, 800);
 }

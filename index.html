@@ -8,18 +8,18 @@
 	</head>
 
 	<body>
-        <img src="imgs/loading.gif" style="position: relative; top: 50%; left: 50%; margin-top: -7px; margin-left: -104px;">
+        <img src="imgs/loading.gif">
 	</body>
 
 	<script type="text/set-trays">[ {"body": ["main"]} ]</script>
-	<script type="text/set-css">global/global.css, global/ui.css</script>
+	<script type="text/set-css">global/global.css</script>
 
 	<script type="text/javascript" src="js/jquery.js"></script>
 	<script type="text/javascript" src="js/jquery.tmpl.min.js"></script>
 
 	<script type="text/javascript" src="js/jquery-ui.min.js"></script>
 
-	<script type="text/javascript" src="http://delrut.com/alien/code/pack.js"></script>
+	<script type="text/javascript" src="http://delrut.com/alien/alien/pack.js"></script>
 	<script type="text/javascript" src="js/modules/Fixture.responses.js"></script>
 
 	 <!-- data for CM widget -->
@@ -36,12 +36,12 @@
 					def: '/api/status'
 					, api: '/api/${method}'
 					, events: '/events/' // do not forget to add method!
-					, modules: 'http://delrut.com/alien/code/modules/${module_name}.js'
+					, modules: 'http://delrut.com/alien/alien/modules/${module_name}.js'
 					, local: {
 						modules: 'js/modules/${module_name}.js'
 					}
 					, plugins: {
-						js: 'http://delrut.com/alien/code/plugins/${module_name}/${module_name}.js'
+                        js: 'http://delrut.com/alien/alien/plugins/${module_name}/${module_name}.js'
 						, tmpl: 'http://delrut.com/alien/code/plugins/${module_name}/${template_name}.html'
 						, res: 'http://delrut.com/alien/code/plugins/${module_name}/resources'
 					}

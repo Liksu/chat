@@ -1,23 +1,7 @@
 .w-room {
-	min-width: 100px;
-	width: 300px;
-	height: 200px;
-	top: 42px;
-	left: 1em;
+	min-height: 200px;
+    margin: 70px 0 0 100px;
 	z-index: 10;
-}
-
-.w-room .icon {
-	display: inline-block;
-	top: 7px;
-	position: absolute;
-	margin-left: 5px;
-}
-
-.w-room .right {
-	position: relative;
-	float: right;
-	right: 4px;
 }
 
 .w-room .caption {
@@ -33,4 +17,39 @@
 
 .w-room .input {
 	display: none;
+}
+
+
+.w-room .content {
+    padding:10px 10px 4px;
+    overflow-y: auto;
+    overflow-x: visible;
+}
+
+
+.w-room dl {
+    background: url(../../../imgs/user.png) no-repeat scroll 0 0;
+    padding-left: 35px;
+}
+
+.w-room dt {
+    font-size: 11px;
+    padding: 0 0 6px 0;
+}
+
+.w-room dt b {
+    font-weight: bold;
+}
+
+.w-room dd {
+    font-size: 13px;
+    padding-bottom: 20px;
+}
+
+.w-room .textarea {
+    padding: 0 12px 3px 6px;
+}
+
+.w-room .textarea textarea {
+    width: 100%;
 }
