@@ -6,17 +6,22 @@
 	background-color: navy;
 	color: white;
     position: absolute;
+	height: 32px;
+	width: 100%;
 }
 
-.caption#headline {
-    padding: 5px 0;
-    width: 100%;
-}
-
-#headline .user_id {
+#headline .user_block {
 	position: absolute;
-	top: 7px;
-	right: 4px;
+	top: 0px;
+	right: 7px;
+	height: 32px;
+}
+
+#headline .user_block .user_name {
+	display: inline-block;
+	font-size: 80%;
+	font-weight: bold;
+	margin-top: 9px;
 }
 
 #blank {
@@ -25,7 +30,7 @@
 	position: relative;
 }
 
-.footer {
+.w-main .footer {
 	text-align: center;
 	color: silver;
 	position: absolute;
@@ -33,5 +38,5 @@
 	width: 100%;
 	left: 0;
 	bottom: 0;
-	font-size: 80%;
+	font-size: 60%;
 }

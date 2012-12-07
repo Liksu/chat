@@ -10,10 +10,10 @@
 .w-room.collapsed {
 	height: 32px !important;
 }
-.w-room.collapsed .fable {display: none;}
-.w-room.collapsed .input {display: none;}
-.w-room.active .unread {display: none}
-.w-room.collapsed .unread {display: inline-block !important;}
+.w-room.collapsed .textarea {display: none;}
+.w-room.collapsed .content {display: none;}
+/*.w-room.active .unread {display: none}*/
+/*.w-room.collapsed .unread {display: inline-block !important;}*/
 
 .w-room .input {
 	display: none;
@@ -28,8 +28,6 @@
 
 
 .w-room dl {
-    background: url(../../../imgs/user.png) no-repeat scroll 0 0;
-    padding-left: 35px;
 }
 
 .w-room dt {

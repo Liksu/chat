@@ -121,6 +121,14 @@ body {
     top: 0;
 }
 
+.user_block {
+	background: url(../imgs/user.png) no-repeat scroll 0 0;
+	padding-left: 35px;
+}
+
+.user_block .user_name {
+	font-weight: bold;
+}
 
 /*
 * UI styles

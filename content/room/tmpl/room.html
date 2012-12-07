@@ -1,28 +1,22 @@
 <div class="caption">
-	<span class="title">title</span>
+	<span class="title">${voc.title}</span>
     <div class="icon ui-icon unread"></div>
     <ul class="icons">
-        <li class="icon ui-icon minimize"><a href=""></a></li>
-        <li class="icon ui-icon close"><a href=""></a></li>
+        <li class="icon ui-icon minimize"></li>
+        <li class="icon ui-icon close"></li>
     </ul>
 </div>
 <div class="content">
-    <dl>
-        <dt><b>Juliet</b> at 12:57</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-    </dl>
-    <dl>
-        <dt><b>Juliet</b> at 12:57</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-    </dl>
-    <dl>
-        <dt><b>Juliet</b> at 12:57</dt>
-        <dd>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua.</dd>
-    </dl>
+	{{each(i, msg) messages}}
+	<dl class="user_block">
+		<dt><b class="user_name">${msg.author}</b> at <nobr>${msg.time}</nobr></dt>
+		<dd>{{html msg.text}}</dd>
+	</dl>
+	{{/each}}
 </div>
 <div class="textarea">
     <textarea>Some text</textarea>
 </div>
 
 <script type="text/set-css">room.css</script>
-<script type="text/set-events">{'window': null, 'caption': '.caption', 'close': '.close', 'minimize': '.minimize,.maximize', 'unread': '.unread'}</script>
+<script type="text/set-events">{'window': null, 'caption': '.caption', 'close': '.close', 'minimize': '.minimize,.maximize', 'unread': '.unread', 'uname': '.user_name'}</script>

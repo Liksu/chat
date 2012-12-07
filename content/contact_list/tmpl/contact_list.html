@@ -1,3 +1,10 @@
-<div class="caption"><span class="title">title</span></div>
+<div class="caption"><span class="title">${voc.title} ${widget_name}</span></div>
+
+<div>
+{{each(i, user) users}}
+	<div class="user_block {{if (user.online)}}online{{/if}}" data-user_id="${user.id}"><span class="user_name">${user.name}</span></div>
+{{/each}}
+</div>
 
 <script type="text/set-css">contact_list.css</script>
+<script type="text/set-events">{'user': '.user_block'}</script>

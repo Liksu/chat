@@ -16,7 +16,7 @@ function(wo) {
 	};
 
 	self.events.set('click.area', function(e) {
-		ok('area');
+		ok('area click');
 		CM.identify('room').each(function(i, w) {w.$rendered.removeClass('active')})
 	});
 }
