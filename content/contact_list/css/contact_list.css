@@ -13,6 +13,7 @@
 }
 
 .w-contact_list .user_block {
+    cursor: pointer;
 	height: 32px;
 	margin-bottom: 0.5em;
 }
@@ -29,4 +30,15 @@
 
 .w-contact_list .user_block.active {
 	background-color: #BBDDFF !important;
+}
+
+.w-contact_list .add-user {
+    background: url(../../../imgs/user_add.png) no-repeat scroll 0 0 transparent;
+    color: #333333;
+    float: left;
+    font-size: 14px;
+    font-weight: bold;
+    padding: 10px 0 13px 34px;
+    text-decoration: none;
+    margin: 4px 0 0 6px;
 }

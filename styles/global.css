@@ -89,7 +89,7 @@ body {
 	color: #7f7f7f;
 	font-weight: bold;
 	font-size: 80%;
-	padding: 5px 40px 5px 15px;
+	padding: 7px 40px 5px 15px;
 	min-height: 22px;
 	vertical-align: middle;
 	background-color: #cfcfcf;
@@ -114,9 +114,9 @@ body {
 	color: white;
 }
 
-.unread {
+.status-icon {
     left: 0;
-    margin: 6px 0 0;
+    margin: 8px 0 0;
     position: absolute;
     top: 0;
 }
@@ -148,11 +148,11 @@ body {
 .maximize {background-position: 0px 0px;}
 .minimize {background-position: -16px 0px;}
 .close {background-position: -32px 0px;}
-.unread {background-position: -64px 0px;}
-.unread.blink {background-position: -80px 0px;}
+.status-icon {background-position: -64px 0px;}
+.status-icon.blink {background-position: -80px 0px;}
 
 .active .maximize {background-position: 0px -16px;}
 .active .minimize {background-position: -16px -16px;}
 .active .close {background-position: -32px -16px;}
-.active .unread {background-position: -64px -16px;}
-.active .unread.blink {background-position: -80px -16px;}
+.unread .active  {background-position: -64px -16px;}
+.unread .active .status-icon.blink {background-position: -80px -16px;}

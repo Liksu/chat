@@ -4,6 +4,7 @@
 {{each(i, user) users}}
 	<div class="user_block {{if (user.online)}}online{{/if}}" data-user_id="${user.id}"><span class="user_name">${user.name}</span></div>
 {{/each}}
+    <a href="#" class="add-user">Add user</a>
 </div>
 
 <script type="text/set-css">contact_list.css</script>
