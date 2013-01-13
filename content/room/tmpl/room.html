@@ -6,13 +6,15 @@
         <li class="icon ui-icon close"></li>
     </ul>
 </div>
-<div class="content">
-	{{each(i, msg) messages}}
-	<dl class="user_block">
-		<dt><b class="user_name">${msg.author}</b> at <nobr>${msg.time}</nobr></dt>
-		<dd>{{html msg.text}}</dd>
-	</dl>
-	{{/each}}
+<div class="wrapper-content">
+    <div class="content">
+	    {{each(i, msg) messages}}
+	    <dl class="user_block">
+		    <dt><b class="user_name">${msg.author}</b> at <nobr>${msg.time}</nobr></dt>
+		    <dd>{{html msg.text}}</dd>
+	    </dl>
+	    {{/each}}
+    </div>
 </div>
 <div class="textarea">
     <textarea>Some text</textarea>

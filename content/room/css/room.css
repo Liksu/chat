@@ -1,34 +1,51 @@
 .w-room {
-	height: 335px;
+    height: 335px;
+    min-height: 335px;
     margin: 70px 0 0 100px;
-	z-index: 10;
+    z-index: 10;
     position: relative;
-    padding-bottom: 60px;
+    padding-bottom: 70px;
+    min-width: 210px;
 }
 
 .w-room .caption {
 }
 
 .w-room.collapsed {
-	height: 32px !important;
+    height: 32px !important;
 }
-.w-room.collapsed .textarea {display: none;}
-.w-room.collapsed .content {display: none;}
+
+.w-room.collapsed .textarea {
+    display: none;
+}
+
+.w-room.collapsed .content {
+    display: none;
+}
 
 .w-room .input {
-	display: none;
+    display: none;
 }
 
+.wrapper-content {
+    position: absolute;
+    top: 34px;
+    right: 0;
+    bottom: 70px;
+    left: 0;
+
+}
 
 .w-room .content {
-    padding:10px 10px 4px;
+    padding: 10px 10px 4px;
     overflow-y: auto;
-    overflow-x: hidden;
-    height: 300px;
-}
-
-
-.w-room dl {
+    overflow: auto;
+    position: absolute;
+    top: 0;
+    right: 0;
+    bottom: 0;
+    left: 0;
+    height: 100%;
 }
 
 .w-room dt {
@@ -37,6 +54,7 @@
 }
 
 .w-room dt b {
+    display: block;
     font-weight: bold;
 }
 
@@ -50,8 +68,13 @@
     position: absolute;
     bottom: 0;
     left: 0;
+    right: 0;
+    height: 56px;
 }
 
 .w-room .textarea textarea {
+    resize: none;
+    height: 46px;
+    margin-top: 3px;
     width: 100%;
 }
